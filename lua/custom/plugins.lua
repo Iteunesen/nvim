@@ -14,6 +14,7 @@ local plugins = {
         "rust-analyzer",
         "typst-lsp",
         "ruff-lsp",
+        "haskell-language-server",
       },
     },
   }

@@ -16,10 +16,10 @@ lspconfig.typst_lsp.setup({
   filetypes = { "typst" },
 })
 
-lspconfig.ruff_lsp.setup({
-  init_options = {
-    settings = {
-      args = {},
-    }
-  }
+lspconfig.ruff_lsp.setup({})
+
+lspconfig.hls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "haskell", "lhaskell", "cabal" }
 })
