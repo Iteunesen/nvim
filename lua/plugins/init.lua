@@ -154,7 +154,6 @@ local default_plugins = {
           require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
         end,
       },
-
       -- cmp sources plugins
       {
         "saadparwaiz1/cmp_luasnip",

@@ -10,9 +10,10 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "lua-language-server",
         "rust-analyzer",
         "typst-lsp",
-        "pyright",
+        "ruff-lsp",
       },
     },
   }
