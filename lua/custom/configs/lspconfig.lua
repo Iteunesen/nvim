@@ -29,7 +29,12 @@ lspconfig.clangd.setup({
   capabilities = capabilities,
 })
 
-lspconfig.ltex_ls.setup({
+lspconfig.ltex.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
+
+lspconfig.texlab.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
