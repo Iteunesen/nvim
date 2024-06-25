@@ -1,7 +1,7 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require "lspconfig"
+local lspconfig = require("lspconfig")
 
 lspconfig.rust_analyzer.setup({
   on_attach = on_attach,
@@ -16,8 +16,6 @@ lspconfig.typst_lsp.setup({
   filetypes = { "typst" },
 })
 
-lspconfig.ruff_lsp.setup({})
-
 lspconfig.hls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
@@ -29,12 +27,8 @@ lspconfig.clangd.setup({
   capabilities = capabilities,
 })
 
-lspconfig.ltex.setup({
+lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-})
-
-lspconfig.texlab.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
+  filetypes = { "python" },
 })

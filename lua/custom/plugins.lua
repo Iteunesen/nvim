@@ -1,12 +1,9 @@
 local plugins = {
   {
-    "neovim/nvim-lspconfig",
-    opts = {
-      inlay_hints = { enabled = true },
-    },
-    config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = {"python"},
+    opts = function()
+      return require("custom.configs.null-ls")
     end,
   },
   {
@@ -16,12 +13,24 @@ local plugins = {
         "lua-language-server",
         "rust-analyzer",
         "typst-lsp",
-        "ruff-lsp",
         "haskell-language-server",
-        "clang",
+        "black",
+        "pyright",
+        "mypy",
+        "ruff",
         "clang-format",
       },
     },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      inlay_hints = { enabled = true },
+    },
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
+    end,
   },
   {
     'mrcjkb/haskell-tools.nvim',
