@@ -14,6 +14,9 @@ lspconfig.typst_lsp.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "typst" },
+  settings = {
+    experimentalFormatterMode = "on",
+  }
 })
 
 lspconfig.hls.setup({
