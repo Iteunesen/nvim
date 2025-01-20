@@ -10,15 +10,6 @@ lspconfig.rust_analyzer.setup({
   root_dir = lspconfig.util.root_pattern("Cargo.toml"),
 })
 
-lspconfig.typst_lsp.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "typst" },
-  settings = {
-    experimentalFormatterMode = "on",
-  }
-})
-
 lspconfig.hls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
@@ -34,4 +25,15 @@ lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "python" },
+})
+
+lspconfig.tinymist.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "typst" },
+  settings = {
+    formatterMode = "typstyle",
+    exportPdf = "onType",
+    semanticTokens = "disable"
+  }
 })
